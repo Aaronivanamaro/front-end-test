@@ -1,0 +1,12 @@
+/* If you change any color from here, it will update the colors
+of the whole website. This has many advantages such as facilititing
+updates, theme selectors and night-mode*/
+
+:root {
+    --black-font-clr: #0a0a0a;
+    --dark-primary-clr: #232931;
+    --dark-secondary-clr: #393e46;
+    --light-primary-clr: #4ecca3;
+    --light-secondary-clr: #eeeeee;
+    --light-primary-variant-clr: #4ecca2c7; 
+}

@@ -1,0 +1,94 @@
+@import url('../GeneralStyles/root.css');
+
+/* --------- BLOG SECTION --------- */
+
+.blog-container {
+    width: 100%;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+}
+.blog-post {
+    margin: 1rem 0;
+    width: 90%;
+}
+.blog-post-video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    background-color: rgba(0,0,0,0.6);
+    background-blend-mode: color;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.blog-image-1 { background-image: url(../Assets/images/rising.png) }
+.blog-image-2 { background-image: url(../Assets/images/social.png) }
+.blog-image-3 { background-image: url(../Assets/images/freedom.png) }
+.blog-image-4 { background-image: url(../Assets/images/city.png) }
+
+.play-btn-svg {
+    display: none;
+    height: 200px;
+    width: 200px;
+    cursor: pointer;
+}
+.play-simple-btn { 
+    font-size: 4.5rem;
+    color: var(--light-primary-clr);
+}
+.blog-post-video:hover .play-simple-btn {
+    display: none;
+}
+.blog-post-video:hover .play-btn-svg {
+    display: inline;
+}
+.blog-post-title {
+    font-size: 1.4rem;
+    margin-top: 1.3rem;
+}
+.blog-post-des {
+    padding-top: 0.7rem;
+}
+#entry-video {
+    width: 100%;
+}
+
+@media (min-width: 520px) {
+    .blog-post {
+        width: 45%;
+    }
+}
+@media (min-width: 600px) {
+    #entry-video {
+        width: auto;
+    }        
+}
+@media (min-width: 900px) {
+    .blog-post {
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        margin: 2rem 0; 
+    }
+    .blog-post-video {
+        width: 50%;
+        height: auto;
+    }
+    .blog-post-title {
+        margin-top: 0;
+    }
+    .blog-post-des {
+        padding-top: 1.1rem;
+    }    
+    .title-des-container {
+        width: 40%;
+        margin-left: 2rem;
+        padding: 2rem;
+    }
+}
+@media (min-width: 1200px) {
+    .blog-post {
+        width: 80%;
+    }
+}

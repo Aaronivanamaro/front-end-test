@@ -1,0 +1,514 @@
+@import url('https://fonts.googleapis.com/css2?family=Padauk:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+@import url('../GeneralStyles/root.css');
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: var(--black-font-clr);
+    font-family: 'Padauk', sans-serif;
+}
+
+/* --------- GENERAL STYLES --------- */
+
+body {
+    margin: 0;
+    padding: 0;
+}
+.display-flex {
+    display: flex;
+    justify-content: space-evenly;
+}
+.display-none {
+    display: none;
+}
+a {
+    text-decoration: none;
+}
+
+/* --------- HEADER --------- */
+
+/* Background-Video */
+.bg-video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.video-cover {
+    background-color: #000;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.55;
+}
+
+/* Navbar */
+header {
+    width: 100%;
+    background-color: var(--light-primary-clr);
+    position: relative;
+    box-shadow: 0 0 2px var(--dark-secondary-clr) ;
+}
+.logo {
+    font-weight: bold;
+}
+.logo-main {
+    font-size: 1.35rem;
+    align-items: center;
+}
+.logo-main h2 {
+    margin: 0;
+    font-family: 'Poiret One', cursive;
+}
+.bi-journal-code {
+    font-size: 2rem;
+    margin-top: 0.4rem;
+}
+.logo-des p {
+    margin: 0;
+    font-family: 'Poiret One', cursive;
+    font-size: 1.1rem;
+    color: #0a0a0ab4;
+    margin-bottom: 0.5rem;
+}
+.web-menu {
+    display: none;
+}
+.nav-bar {
+    list-style: none;
+    align-items: center;
+}
+.nav-bar li a{
+    display: inline-block;
+}
+.nav-bar li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: var(--dark-primary-clr);
+    transition: width .5s;
+}
+.nav-bar li a:hover::after {
+    width: 100%;
+}
+/* Navbar Responsive */
+.res-menu-fixed {
+    position: fixed;
+    z-index: 200;
+}
+.responsive-menu {
+    display: none;
+    justify-content: center;
+}
+.show-hide {
+    position: fixed;
+    background-color: var(--dark-primary-clr);
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    font-size: 1.3rem;
+    position: fixed;
+}
+.nav-responsive {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 8rem 0 6rem 0;
+}
+.nav-responsive li a{
+    font-size: 2rem;
+    color: var(--light-primary-clr);
+    display: inline-block;
+}
+.nav-responsive li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: var(--light-primary-clr);    
+    transition: width .5s;
+}
+.nav-responsive li a:hover::after {
+    width: 100%;
+}
+ 
+@media (min-width: 740px) {
+    .hamburger {
+        display: none;
+        visibility: hidden;
+    }
+    .web-menu {
+        display: flex;
+    }
+    .web-menu ul li {
+        margin-right: 3rem;
+        font-size: 1.25rem;
+    }
+}
+
+/* --------- WELCOME SECTION --------- */
+
+.welcome-section {
+    height: 90vh;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 1.5rem;
+    text-align: center;
+}
+.welcome-title {
+    color: var(--light-secondary-clr);
+    font-size: 3rem;
+    margin: 0;
+}
+.welcome-des {
+    color: var(--light-secondary-clr);
+    font-size: 1.1rem;
+}
+.welcome-btns {
+    margin-top: 1rem;
+    width: 320px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.welcome-btn {
+    background-color: var(--light-primary-clr);
+    border: none;
+    border-radius: 2px;
+    width: 36%;
+    padding: 0.35rem;
+    font-size: 1.15rem;
+    font-weight: bold;
+    box-shadow: 0 0 4px var(--dark-primary-clr);
+    cursor: pointer;
+}
+.welcome-btn + .welcome-btn {
+    background-color: var(--dark-primary-clr);
+    box-shadow: 0 0 4px var(--light-primary-clr);
+}
+.welcome-btn a {
+    color: var(--dark-secondary-clr);
+}
+.welcome-btn + .welcome-btn a {
+    color: var(--light-primary-clr);
+}
+.welcome-btn:hover {
+    filter: brightness(1.2);
+} 
+
+@media (min-width: 400px) {
+    .welcome-btns {
+        width: 400px;
+        font-size: 1.15rem;
+    }    
+}
+@media (min-width: 500px) {
+    .welcome-title {
+        margin-bottom: 1rem;
+    }
+    .welcome-des {
+        margin-bottom: 1rem;
+    }
+}
+@media (min-width: 800px) {
+    .welcome-title {
+        font-size: 4rem;
+        margin-bottom: 3rem;
+    }
+    .welcome-des {
+        font-size: 1.25rem;
+    }
+    .welcome-btns {
+        width: 450px;
+    }        
+    .welcome-btn {
+        font-size: 1.25rem;
+    }
+}
+@media (min-width: 1200px) {
+    .welcome-title {
+        font-size: 5.5rem;
+    }
+    .welcome-des {
+        font-size: 1.4rem;
+    }    
+    .welcome-btns {
+        width: 550px;
+    }        
+    .welcome-btn {
+        font-size: 1.45rem;
+    }
+}
+
+/* --------- MAIN --------- */
+
+main {
+    position: relative;
+}
+section {
+    flex-direction: column;
+    width: 100%;
+}
+
+/* --------- TABLE SECTION --------- */
+
+.section-two {
+    background-color: var(--dark-secondary-clr);
+    display: flex;
+    text-align: center;
+    padding-bottom: 3rem;
+}
+.section-two * {
+    color: var(--light-secondary-clr);
+}
+.table-main-title {
+    font-size: 3rem;
+    margin: 0 2rem;
+    margin-top: 2.5rem;
+    color: var(--light-primary-clr);
+}
+.table-description {
+    font-size: 1.4rem;
+    margin: 1rem;
+    font-style: italic;
+}
+.table-svg {
+    width: 600px;
+    height: 400px;
+    margin: 0 auto;
+}
+ .table-container {
+    flex-direction: column;
+    margin: 2rem; 
+    box-shadow: 0 0 3px rgba(148, 197, 172, 0.5);
+}
+.table-header {
+    width: 100%;
+    border-bottom: solid 3px var(--light-primary-clr);
+    border-top: solid 3px var(--light-primary-clr);
+    background-color: var(--light-primary-variant-clr);
+}
+.table-header > :last-child {
+    border-right: solid 3px var(--light-primary-clr);
+}
+.table-header > :first-child {
+    border-left: solid 3px var(--light-primary-clr);
+}
+.table-title {
+    flex: 1;
+    text-align: center;
+    border-left: solid 3px var(--light-primary-clr);
+    padding: 1rem 0; 
+    font-size: 1.3rem;
+    font-weight: bold;
+    width: 100%;
+}
+.table-section {
+    border-bottom: solid 3px var(--light-primary-variant-clr);   
+}
+.table-section > :last-child {
+    border-right: solid 3px var(--light-primary-variant-clr);
+}
+.table-info {
+    flex: 1;
+    text-align: center;
+    border-left: solid 3px var(--light-primary-variant-clr);
+    padding: 1rem;
+    font-size: 1.15rem;
+}
+
+/* In this case, I did not choose mobile first because
+   this way was easier because of the table
+*/
+
+@media (max-width: 720px) {
+    .table-title {
+        padding: 0.45rem 0;
+    }
+    .table-info {
+        padding: 0.45rem;
+    }
+}
+@media (max-width: 650px) {
+    .table-container {
+        box-shadow: none;
+    }    
+    .table-main-title {
+        font-size: 2.5rem;
+    }
+    .table-description {
+        font-size: 1.25rem;
+    }    
+    .table-svg {
+        width: 100%;
+        height: auto;
+    }
+    .table-header {
+        display: none;
+    }
+    .table-section {
+        flex-direction: column;
+        position: relative;
+        border: none;
+        border: solid 2px var(--light-primary-variant-clr);        
+        padding: 0.75rem 0;
+        margin-bottom: 2rem;
+        padding-left: 25%;
+    }    
+    .table-section > :last-child {
+        border: none;
+    }    
+    .table-info {
+        text-align: right;
+        padding-right: 1.2rem;
+        border: none;
+    }
+    .table-info:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        padding-left: 1.2rem;
+        font-weight: 700;
+        color: var(--light-primary-clr);
+    }       
+}
+/* A brief configuration for bigger screens */
+
+@media (min-width: 1100px) {
+    .table-container {
+        margin: 1rem auto;
+        width: 80%;
+    }
+}
+
+/* --------- FOOTER --------- */
+
+footer {
+    width: 100%;
+    background-color: var(--dark-primary-clr);
+}
+footer * {
+    color: var(--light-secondary-clr);
+}
+.footer-menu {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 3rem;
+}
+.footer-menu .logo {
+    color: var(--light-primary-clr);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    margin-bottom: 2rem;
+}
+.footer-menu .logo-main {
+    width: 100px;
+    padding-bottom: 7px;
+}
+.footer-menu .logo-main * {
+    color: var(--light-primary-clr);
+}
+.footer-menu .logo-main h2{
+    padding-top: 7px;
+}
+.footer-menu .logo-des p{
+    color: var(--light-secondary-clr);
+    padding-top: 14px;
+}
+.social-networks {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+.social-networks h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.s-n-container {
+    width: 125px;
+    display: flex;
+    margin: 0.5rem;
+    cursor: pointer;
+}
+.s-n-container > :first-child {
+    color: var(--light-primary-clr);
+    font-size: 2rem;
+}
+.s-n-container:hover > :first-child {
+    filter: brightness(1.1);
+}
+.s-n-container:hover p {
+    color: var(--light-primary-clr);
+}
+.s-n-container p {
+    font-size: 1.2rem;
+    margin-left: 1rem;
+}
+.short-menu {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+.short-menu h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.short-menu ul {
+    list-style: none;
+}
+.footer-links {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    text-align: center;
+}
+.short-menu ul li a:hover {
+    color: var(--light-primary-clr);
+}
+.footer-copyright {
+    border-top: solid 1px var(--light-primary-clr);
+    padding: 2rem 0;
+    text-align: center;
+}
+.footer-copyright h3 {
+    margin-bottom: 0.7rem;
+}
+.footer-copyright p {
+    color: var(--light-primary-clr);
+    font-style: italic;
+}
+@media (min-width: 550px) {
+    .social-networks {
+        width: 50%;
+    }
+    .short-menu {
+        width: 50%;
+    }    
+}
+@media (min-width: 1000px) {
+    .footer-menu .logo {
+        width: 30%;
+    }     
+    .social-networks {
+        width: 30%;
+    }
+    .short-menu {
+        width: 30%;
+    }    
+}

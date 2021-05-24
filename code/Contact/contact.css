@@ -1,0 +1,75 @@
+@import url('../GeneralStyles/root.css');
+
+/* --------- CONTACT SECTION --------- */
+
+body {
+    background-color: var(--dark-secondary-clr);
+}
+.contact-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#map {
+    width: 90%;
+    height: 300px;
+}
+.contact-form {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.contact-form h2 {
+    color: var(--light-secondary-clr);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+.form-style {
+    width: 80%;
+    padding: 0.6rem;
+    border: none;
+    margin: 0.5rem;
+    font-size: 1.1rem;
+    background-color: var(--light-secondary-clr);
+}
+.text-area {
+    height: 160px;
+}
+.submit-btn {
+    background-color: var(--light-primary-clr);
+    font-weight: bold;
+    cursor: pointer;
+}
+.submit-btn:hover {
+    filter: brightness(1.2);
+}
+@media (min-width: 550px) {
+    #map {
+        height: 400px;
+    }
+    .contact-form form {
+        width: 90%;
+    }
+}
+@media (min-width: 850px) {
+    .contact-section {
+        align-items: center;
+        margin-bottom: 1rem; 
+    }    
+    #map {
+        width: 50%;
+        height: 500px;
+    }
+    .contact-form {
+        width: 50%;
+    }
+}
